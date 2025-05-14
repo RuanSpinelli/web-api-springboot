@@ -1,20 +1,30 @@
 package dio.web.api.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "usuario")
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String login;
     private String password;
-    
+
+    // Construtor padrão
     public Usuario() {
     }
 
+    // Construtor com parâmetros
     public Usuario(Integer id, String login, String password) {
         this.id = id;
         this.login = login;
         this.password = password;
     }
 
+    // Getters e Setters
     public Integer getId() {
         return this.id;
     }
@@ -39,6 +49,7 @@ public class Usuario {
         this.password = password;
     }
 
+    // Método toString
     @Override
     public String toString() {
         return "{" +
@@ -47,5 +58,4 @@ public class Usuario {
             ", password='" + getPassword() + "'" +
             "}";
     }
-    
 }
