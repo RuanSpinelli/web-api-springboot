@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 
-import org.springdoc.core.models.GroupedOpenApi;
+// import org.springdoc.core.models.GroupedOpenApi;
 
 @Configuration
-public class OpenApiConfig {
+public class SwaggerConfig {
     
     @Bean
     public OpenAPI customOpenAPI() {

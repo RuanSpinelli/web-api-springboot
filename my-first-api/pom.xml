@@ -18,7 +18,30 @@
 		<license/>
 	</licenses>
 	<developers>
-		<developer/>
+	<!--
+		<developer>
+			Ruan Spinelli - Software engennier 
+		</developer>
+		<developer>
+			Toriel Dremmur - UI/UX (Figma)
+		</developer>
+		<developer>
+			Steve (Minecraft) - Product Manager
+		</developer>
+		<developer>
+			Gandalf - Tester 
+		</developer>
+		<developer>
+			Gabriel Carlos - Ilustrator / Digital Artist / Frontend Developer
+		</developer>
+		<developer>
+			Loona (Helluva boss) - Data Base Admin (SQL Dev)
+		</developer>
+		<developer>
+			Roxane (FNAF) - Frontend
+		</developer>
+
+	-->
 	</developers>
 	<scm>
 		<connection/>
@@ -36,18 +59,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.5.0</version> <!-- ou versão mais recente -->
-		</dependency>
-		<!-- SpringDoc OpenAPI (Swagger) -->
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.5.0</version>
+			<version>2.3.0</version>
 		</dependency>
 
+	
 		<!-- Spring Data JPA (Já inclui Hibernate 6.6.x) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

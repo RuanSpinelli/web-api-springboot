@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import dio.web.api.handle.BusinessException;
 import dio.web.api.model.Usuario;
 import dio.web.api.repository.UserRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,6 +23,10 @@ public class UsuarioController {
     // CREATE - Cadastrar usuário
     @PostMapping
     public ResponseEntity<Usuario> criarUsuario(@RequestBody Usuario usuario) {
+        if (usuario.getLogin() == null) {
+            throw new BusinessException("O campo de login é obrigatório");
+        }
+
         Usuario novoUsuario = repository.save(usuario);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
     }
